@@ -1,0 +1,41 @@
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 2000px;
+    padding: 0px 66px;
+    margin: auto;
+    color: var(--white);
+}
+
+.nav-links {
+    padding-left: 0;
+    list-style: none;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    padding-top: 3px;
+}
+
+@media (max-width: 48.5rem) {
+    .nav-links li:not(:last-child) {
+        display: none;
+    }
+}
+
+.nav-logo {
+    font-size: 2rem;
+    font-weight: 600;
+}
+
+@media(width<=991px) {
+    .nav {
+        max-width: 960px
+    }
+}
+
+@media(width<=767px) {
+    .nav {
+        max-width: 735px;
+    }
+}

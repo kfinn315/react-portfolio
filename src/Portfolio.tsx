@@ -1,0 +1,173 @@
+import hero from './assets/hero.jpeg';
+import logo from './assets/logo.svg';
+import sunburst from './assets/sunburst.png';
+import { LayoutSection } from './reactComponents/LayoutSectiion';
+
+export function Portfolio() {
+    return (<>
+        <nav>
+            <div className="nav container">
+                <div className="nav-logo">
+                    Kevin Finn
+                </div>
+                <ul className="nav-links">
+                    <li>
+                        <a href="#about-me" className="btn btn--nav">About me</a>
+                    </li>
+                    <li>
+                        <a href="#portfolio" className="btn btn--nav">Portfolio</a>
+                    </li>
+                    <li>
+                        <a href="#experience" className="btn btn--nav">Experience</a>
+                    </li>
+                    <li>
+                        <a href="https://www.linkedin.com/in/finnkevin?trk=profile-badge" title="LinkedIn">
+                            <svg xmlns="http://www.w3.org/2000/svg" height="32" viewBox="0 0 72 72" width="32">
+                                <g fill="none" fill-rule="evenodd">
+                                    <path
+                                        d="M8,72 L64,72 C68.418278,72 72,68.418278 72,64 L72,8 C72,3.581722 68.418278,-8.11624501e-16 64,0 L8,0 C3.581722,8.11624501e-16 -5.41083001e-16,3.581722 0,8 L0,64 C5.41083001e-16,68.418278 3.581722,72 8,72 Z"
+                                        fill="#007EBB" />
+                                    <path
+                                        d="M62,62 L51.315625,62 L51.315625,43.8021149 C51.315625,38.8127542 49.4197917,36.0245323 45.4707031,36.0245323 C41.1746094,36.0245323 38.9300781,38.9261103 38.9300781,43.8021149 L38.9300781,62 L28.6333333,62 L28.6333333,27.3333333 L38.9300781,27.3333333 L38.9300781,32.0029283 C38.9300781,32.0029283 42.0260417,26.2742151 49.3825521,26.2742151 C56.7356771,26.2742151 62,30.7644705 62,40.051212 L62,62 Z M16.349349,22.7940133 C12.8420573,22.7940133 10,19.9296567 10,16.3970067 C10,12.8643566 12.8420573,10 16.349349,10 C19.8566406,10 22.6970052,12.8643566 22.6970052,16.3970067 C22.6970052,19.9296567 19.8566406,22.7940133 16.349349,22.7940133 Z M11.0325521,62 L21.769401,62 L21.769401,27.3333333 L11.0325521,27.3333333 L11.0325521,62 Z"
+                                        fill="#FFF" />
+                                </g>
+                            </svg>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://github.com/kfinn315" title="GitHub">
+                            <svg height="32" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 98 96">
+                                <path fillRule="evenodd" clipRule="evenodd"
+                                    d="M48.854 0C21.839 0 0 22 0 49.217c0 21.756 13.993 40.172 33.405 46.69 2.427.49 3.316-1.059 3.316-2.362 0-1.141-.08-5.052-.08-9.127-13.59 2.934-16.42-5.867-16.42-5.867-2.184-5.704-5.42-7.17-5.42-7.17-4.448-3.015.324-3.015.324-3.015 4.934.326 7.523 5.052 7.523 5.052 4.367 7.496 11.404 5.378 14.235 4.074.404-3.178 1.699-5.378 3.074-6.6-10.839-1.141-22.243-5.378-22.243-24.283 0-5.378 1.94-9.778 5.014-13.2-.485-1.222-2.184-6.275.486-13.038 0 0 4.125-1.304 13.426 5.052a46.97 46.97 0 0 1 12.214-1.63c4.125 0 8.33.571 12.213 1.63 9.302-6.356 13.427-5.052 13.427-5.052 2.67 6.763.97 11.816.485 13.038 3.155 3.422 5.015 7.822 5.015 13.2 0 18.905-11.404 23.06-22.324 24.283 1.78 1.548 3.316 4.481 3.316 9.126 0 6.6-.08 11.897-.08 13.526 0 1.304.89 2.853 3.316 2.364 19.412-6.52 33.405-24.935 33.405-46.691C97.707 22 75.788 0 48.854 0z"
+                                    fill="#24292f" />
+                            </svg>
+                        </a>
+                    </li>
+                </ul>
+                <div>
+                    {/* <!-- <a href="">Contact me</a> --> */}
+                </div>
+            </div>
+        </nav>
+        <main>
+            <div className="layout-section--highlighted">
+                <LayoutSection id="intro" className="layout-section " aria-describedby="intro-h1 intro-h2">
+                    <div className="container">
+                        <div className="intro-col1">
+                            <img id="intro-hero" className="img img--circle img--transparent-border" src={hero}
+                                width="400" height="400" />
+                            <div></div>
+                        </div>
+                        <div className="intro-col2">
+                            <h1 className="title--intro">Kevin Finn<br />Web Developer</h1>
+                            <h2 className="title--intro-md">
+                                Bringing your idea to life with&nbsp;
+                                <strong>modern technology</strong>.
+                            </h2>
+                        </div>
+                    </div>
+                </LayoutSection>
+                <LayoutSection id="contact" className="layout-section" aria-describedby="design">
+                    <div className="container">
+                        <div id="design">
+                            <h3>Location</h3>
+                            <p className="contact-text-sm">North Carolina, USA</p>
+                        </div>
+                        <div id="phone">
+                            <h3>Phone</h3>
+                            <a className="contact-text-sm" href="tel:xxx-xxx-xxxx">xxx-xxx-xxxx</a>
+                        </div>
+                        <div id="email">
+                            <h3>Drop your message</h3>
+                            <a className="contact-text-sm" href="email:email@address.com">email@address.com</a>
+                        </div>
+                        <div id="icon"><img /></div>
+                    </div>
+                </LayoutSection>
+            </div>
+            <LayoutSection id="about-me" className="layout-section" aria-labelledby="heading-aboutme">
+                <div className="container">
+                    <h2 id="heading-aboutme" className="title--sm layout-section-title">
+                        About me
+                    </h2>
+                    <div className="layout-grid-half">
+                        <div>
+                            <p>
+                                Hello! I'm a <b>Software Developer</b> from New Jersey, currently living in North Carolina,
+                                with over a decade of
+                                experience creating web and mobile applications.
+                            </p>
+                            <p>
+                                I began my career building Android and iOS mobile apps, later transitioning to web apps with
+                                .NET Core.
+                            </p>
+                            <p>
+                                My expertise is in C#, Javascript/Typescript, HTML and CSS, MySQL, and ReactJS. I also have
+                                skills in Docker, Kubernetes and Google Cloud Platform.
+                            </p>
+                        </div>
+                        <div>
+                            <p>
+                                Curious to know more? Check-out my
+                                <a href="#portfolio">portfolio</a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </LayoutSection>
+            <LayoutSection id="portfolio" className="layout-section" aria-labelledby="heading-portfolio">
+                <div className="container">
+                    <h2 id="heading-portfolio" className="title--sm layout-section-title">
+                        Portfolio
+                    </h2>
+                    <div className="portfolio">
+                        <a href="https://kfinn315.github.io/ReactSunburst"><img src={sunburst} width="300"
+                            height="300" alt="Sunburst app" className="portfolio-screenshot" />
+                        </a>
+                        <div>
+                            <h3 className="title">React Sunburst</h3>
+                            <p className="text">
+                                A Sunburst Chart built using ReactJS, D3.js and Typescript.
+                            </p>
+                            <a href="https://github.com/kfinn315/ReactSunburst" className="btn btn--line"
+                                target="_blank">Repository</a>
+                            <a href="https://kfinn315.github.io/ReactSunburst" className="btn btn--line"
+                                target="_blank">Demo</a>
+                        </div>
+                    </div>
+                </div>
+            </LayoutSection>
+            <LayoutSection id="experience" className="layout-section" aria-labelledby="heading-experience">
+                <div className="container">
+                    <h2 id="heading-experience" className="title--sm layout-section-title">
+                        Experience
+                    </h2>
+                    <ul className="tags">
+                        <li className="tag">C#</li>
+                        <li className="tag">.NET Core</li>
+                        <li className="tag">MySQL</li>
+                        <li className="tag">Google Cloud</li>
+                        <li className="tag">Kubernetes</li>
+                        <li className="tag">HTML</li>
+                        <li className="tag">CSS</li>
+                        <li className="tag">JavaScript</li>
+                        <li className="tag">TypeScript</li>
+                        <li className="tag">React</li>
+                    </ul>
+                </div>
+            </LayoutSection>
+        </main>
+        <footer>
+            <div className="container">
+                <div className="footer">
+                    <div className="side">
+                        <img src={logo} alt="Kevin Finn logo" width="45" height="43" />
+                        <p className="footer-text text--sm">
+                            &copy; 2025 Kevin Finn All rights reserved.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </>);
+}

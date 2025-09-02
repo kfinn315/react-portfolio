@@ -1,0 +1,36 @@
+a {
+    color: var(--anchor-color);
+    opacity: 0.85;
+    transition: opacity 200ms;
+}
+
+a:hover {
+    opacity: 1;
+}
+
+p {
+    color: var(--gray);
+    font-weight: 300;
+    line-height: 1.4;
+}
+
+strong {
+    font-weight: inherit;
+}
+
+figure,
+blockquote {
+    margin: 0;
+}
+
+address {
+    font-style: normal;
+}
+
+nav {
+    background-color: var(--primary);
+}
+
+footer {
+    background: var(--black);
+}
