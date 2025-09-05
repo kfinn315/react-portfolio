@@ -30,3 +30,12 @@
     color: var(--primary);
     outline-color: var(--primary);
 }
+
+ul.tag-groups {
+    padding-left: 0;
+    list-style: none;
+}
+
+li.tag-group>.title {
+    margin-bottom: 0;
+}

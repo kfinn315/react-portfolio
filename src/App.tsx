@@ -1,5 +1,5 @@
 import './App.css'
-import { Portfolio } from './portfolio'
+import { Portfolio } from './reactComponents/Portfolio'
 
 function App() {
   return <Portfolio />;

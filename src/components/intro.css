@@ -26,6 +26,14 @@
     border-radius: 50%;
 }
 
+.intro-col2 .title--intro {
+    text-align: left;
+}
+
+.intro-col2 .title--intro-md {
+    text-align: left;
+}
+
 .intro-caption {
     color: var(--black);
 }
