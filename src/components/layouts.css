@@ -1,9 +1,6 @@
 .layout-section {
     scroll-margin-top: 20px;
-    padding-top: 50px;
-    padding-bottom: 50px;
-    /* background-color: var(--white);
-    color: var(--primary); */
+    padding-block: 50px;
 }
 
 main>.layout-section:nth-child(n+1) {
@@ -13,7 +10,6 @@ main>.layout-section:nth-child(n+1) {
 
 .layout-section-title {
     margin-top: 0px;
-    /* margin-bottom: 100px; */
     font-family: var(--font-primary);
 }
 
@@ -25,10 +21,6 @@ main>.layout-section:nth-child(n+1) {
 }
 
 @media (max-width: 37.5rem) {
-    .layout-section {
-        padding-bottom: 100px;
-    }
-
     .layout-grid-half {
         grid-template-columns: 1fr;
     }

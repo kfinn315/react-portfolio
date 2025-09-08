@@ -2,8 +2,8 @@
     max-width: 1160px;
     padding-inline: 70px;
     margin-inline: auto;
+    overflow-x: hidden;
 }
-
 
 @media(width <=991px) {
     .container {
@@ -14,5 +14,11 @@
 @media (width <=767px) {
     .container {
         max-width: 570px;
+    }
+}
+
+@media(width<=429px) {
+    .container {
+        padding-inline: 20px;
     }
 }

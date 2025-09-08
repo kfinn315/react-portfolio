@@ -1,22 +1,22 @@
 #intro {
     position: relative;
-    /* padding-top: 195px;
-    padding-bottom: 30px; */
     padding-block: 100px;
     --grid-col-1: 285px;
-    --grid-gap: 65px;
+    --col-gap: 65px;
 }
 
 #intro>.container {
     align-items: center;
     display: grid;
     grid-template-columns: var(--grid-col-1) auto;
-    column-gap: var(--grid-gap);
+    grid-template-areas: "hero title" "hero subtitle" "hero motto";
+    column-gap: var(--col-gap);
 }
 
 .intro-col1 {
     display: grid;
     justify-content: center;
+    grid-area: hero;
 }
 
 .intro-col1>div {
@@ -26,11 +26,7 @@
     border-radius: 50%;
 }
 
-.intro-col2 .title--intro {
-    text-align: left;
-}
-
-.intro-col2 .title--intro-md {
+.title--intro-md {
     text-align: left;
 }
 
@@ -43,51 +39,75 @@
     grid-column: 1
 }
 
-#intro .title--intro-md {
+.title--intro-md {
     color: var(--black);
+}
+
+#intro #title {
+    align-self: end;
+    grid-area: title;
+}
+
+#intro #subtitle {
+    align-self: start;
+    grid-area: subtitle;
+}
+
+#intro #motto {
+    grid-area: motto;
 }
 
 @media(width <=991px) {
     #intro {
-        margin-top: 55px;
-        margin-bottom: 55px;
-
-        /* padding-block: 55px 0px; */
         --grid-col-1: 250px;
-        --grid-gap: 50px;
+        margin-block: 55px;
+        padding-block: 0px;
     }
 
-    .intro-col2 {
-        padding-top: 0px;
+    #intro>.container {
+        grid-template-areas: "hero" "title" "subtitle" "motto";
+        grid-template-columns: unset;
+        grid-template-rows: auto auto auto;
+        justify-items: center;
+    }
+
+    .intro-col1 {
+        width: var(--grid-col-1);
+        margin-bottom: 10px;
+    }
+
+    #motto {
+        margin-block: 10px;
+    }
+
+    .title--intro-md {
+        text-align: center;
     }
 }
 
 @media(width <=767px) {
     #intro {
-        margin-top: 55px;
-        /* margin-bottom: 110px; */
-
-        padding-bottom: 10px;
         --grid-col-1: 150px;
-        --grid-gap: 25px;
-        column-gap: 25px;
-        /* grid-template-columns: 150px auto; */
+    }
+
+    .intro-col1 {
+        width: var(--grid-col-1);
     }
 }
 
 @media(width<=429px) {
-    #intro>.container {
-        align-items: center;
-        display: grid;
-        grid-template-columns: auto;
-    }
-
     #intro {
-        padding: unset;
+        --grid-col-1: 100px;
+        padding: 20px;
         margin: unset;
     }
 
-    .intro-col2 {
-        text-align: center;
+    .intro-col1 {
+        width: var(--grid-col-1);
+    }
+
+    #intro>.container {
+        align-items: center;
+        padding-inline: unset;
     }
 }

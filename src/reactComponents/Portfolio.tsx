@@ -108,14 +108,13 @@ export function Portfolio() {
                 width="400" height="400" />
             <div></div>
         </div>
-        <div className="intro-col2">
-            <h1 className="title--intro">Kevin Finn<br />Web Developer</h1>
-            <h2 className="title--intro-md">
-                Bringing your idea to life with&nbsp;
-                <strong>modern technology</strong>.
-            </h2>
-        </div>
-    </div>;
+        <h1 id="title" className="title--intro">Kevin&nbsp;Finn</h1>
+        <h2 id="subtitle" className="title--intro">Web&nbsp;Developer</h2>
+        <h3 id="motto" className="title--intro title--intro-md">
+            Bring your idea to life with&nbsp;
+            <strong>modern technology</strong>.
+        </h3>
+    </div >;
 
     const experience = <div>
         <p>
