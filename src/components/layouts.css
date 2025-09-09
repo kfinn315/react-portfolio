@@ -20,16 +20,13 @@ main>.layout-section:nth-child(n+1) {
     text-align: left;
 }
 
-@media (max-width: 37.5rem) {
-    .layout-grid-half {
-        grid-template-columns: 1fr;
-    }
-}
-
 .layout-section--highlighted {
-    padding-block: 1px;
     background-color: var(--primary);
     color: var(--white);
+}
+
+.layout-section--heading {
+    padding-top: 100px;
 }
 
 .layout-overlay {
@@ -38,4 +35,28 @@ main>.layout-section:nth-child(n+1) {
     left: 0;
     right: 0;
     top: 0;
+}
+
+@media (max-width: 37.5rem) {
+    .layout-grid-half {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media(width <=991px) {
+    .layout-section--heading {
+        padding-top: 25px;
+    }
+}
+
+@media (width <=767px) {
+    .layout-section--heading {
+        padding-top: 25px;
+    }
+}
+
+@media(width<=429px) {
+    .layout-section--heading {
+        padding-top: 25px;
+    }
 }

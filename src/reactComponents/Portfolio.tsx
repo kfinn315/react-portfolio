@@ -3,6 +3,9 @@ import logo from '../assets/logo.svg';
 import sunburst from '../assets/sunburst.png';
 import { PortfolioItem } from './PortfolioItem';
 import { LayoutSection } from './LayoutSectiion';
+import DraftsOutlinedIcon from '@mui/icons-material/DraftsOutlined';
+import LocalPhoneOutlinedIcon from '@mui/icons-material/LocalPhoneOutlined';
+import LocationOnOutlinedIcon from '@mui/icons-material/LocationOnOutlined';
 
 export function Portfolio() {
     const skillsTags: Record<string, string[]> = {
@@ -21,7 +24,7 @@ export function Portfolio() {
             "React"]
     }
 
-    const aboutMe = <div className="layout-grid-half">
+    const AboutMe = () => <div className="layout-grid-half">
         <div>
             <p>
                 A <b>Software Developer</b> living in North Carolina, with over a decade of experience creating web and mobile applications.
@@ -40,7 +43,7 @@ export function Portfolio() {
         </div>
     </div>;
 
-    const projectItems = <div>
+    const ProjectItems = () => <div>
         <PortfolioItem>
             <a href="https://kfinn315.github.io/ReactSunburst"><img src={sunburst} width="300"
                 height="300" alt="Sunburst app" className="portfolio-screenshot" />
@@ -63,7 +66,7 @@ export function Portfolio() {
         </PortfolioItem>
     </div>;
 
-    const skills = <ul className='tag-groups'>{
+    const Skills = () => <ul className='tag-groups'>{
         Object.entries(skillsTags).map(([name, items]) => {
             return <li className='tag-group'>
                 <h3 className='title'>
@@ -79,44 +82,40 @@ export function Portfolio() {
     }
     </ul>
 
-    const contactSection = <div className="container">
-        <div id="design">
-            <h3>Location</h3>
-            <p className="contact-text-sm">North Carolina, USA</p>
-        </div>
-        <div id="phone">
-            <h3>Phone</h3>
-            <a className="contact-text-sm" href="tel:xxx-xxx-xxxx">xxx-xxx-xxxx</a>
-        </div>
-        <div id="email">
-            <h3>Drop your message</h3>
-            <a className="contact-text-sm" href="email:email@address.com">email@address.com</a>
-        </div>
-        <div id="icon"><img /></div>
+    const ContactSection = () => <div className="container">
+        <div id="location" className='text--contact contact-cell contact-icon'><LocationOnOutlinedIcon className="text--vertical-bottom" /></div>
+        <h3 className='title--contact-heading contact-heading text-left'>Location</h3>
+        <p className="text--contact contact-cell text-left">North Carolina, USA</p>
+        <div id="phone" className='text--contact contact-cell contact-icon'><LocalPhoneOutlinedIcon className="text--vertical-bottom" /></div>
+        <h3 className='title--contact-heading contact-heading'>Phone</h3>
+        <a className="text--contact contact-cell" href="tel:xxx-xxx-xxxx">xxx-xxx-xxxx</a>
+        <h3 className='title--contact-heading contact-heading'>Drop your message</h3>
+        <a className="text--contact contact-cell" href="email:email@address.com">email@address.com</a>
+        <div id="email" className='text--contact contact-cell contact-icon'><DraftsOutlinedIcon className="text--vertical-bottom" /></div>
     </div>
 
-    const footer = <div className="side">
+    const Footer = () => <div className="side">
         <img src={logo} alt="Kevin Finn logo" width="45" height="43" />
         <p className="footer-text text--sm">
             &copy; 2025 Kevin Finn All rights reserved.
         </p>
     </div>;
 
-    const introSection = <div className="container">
-        <div className="intro-col1">
+    const IntroSection = () => <div className="container">
+        <div id="hero">
             <img id="intro-hero" className="img img--circle img--transparent-border" src={hero}
                 width="400" height="400" />
             <div></div>
         </div>
-        <h1 id="title" className="title--intro">Kevin&nbsp;Finn</h1>
-        <h2 id="subtitle" className="title--intro">Web&nbsp;Developer</h2>
-        <h3 id="motto" className="title--intro title--intro-md">
-            Bring your idea to life with&nbsp;
-            <strong>modern technology</strong>.
+        <h1 id="title" className="title--lg title--intro">Kevin Finn</h1>
+        <h2 id="subtitle" className="title--lg title--intro">Web Developer</h2>
+        <h3 id="motto" className="title--secondary title--intro title--intro-md">
+            Bring your ideas to life with
+            <strong> modern technology</strong>.
         </h3>
     </div >;
 
-    const experience = <div>
+    const Experience = () => <div>
         <p>
             AMPEL BioSolutions. Charlottesville, VA
         </p>
@@ -127,43 +126,43 @@ export function Portfolio() {
 
     return (<>
         <main>
-            <div className="layout-section--highlighted">
+            <div className="layout-section--highlighted layout-section--heading">
                 <LayoutSection id="intro" className="layout-section " aria-describedby="intro-h1 intro-h2">
-                    {introSection}
+                    <IntroSection />
                 </LayoutSection>
                 <LayoutSection id="contact" aria-describedby="design">
-                    {contactSection}
+                    <ContactSection />
                 </LayoutSection>
             </div>
             <LayoutSection id="about-me" aria-labelledby="heading-aboutme">
                 <div className="container">
                     <SectionTitle name="About Me" />
-                    {aboutMe}
+                    <AboutMe />
                 </div>
             </LayoutSection>
             <LayoutSection id="projects" aria-labelledby="heading-projects">
                 <div className="container">
                     <SectionTitle name="Projects" />
-                    {projectItems}
+                    <ProjectItems />
                 </div>
             </LayoutSection>
             <LayoutSection id="skills" aria-labelledby="heading-skills">
                 <div className="container">
                     <SectionTitle name="Skills" />
-                    {skills}
+                    <Skills />
                 </div>
             </LayoutSection>
             <LayoutSection id="experience" aria-labelledby="heading-experience">
                 <div className="container">
                     <SectionTitle name="Experience" />
-                    {experience}
+                    <Experience />
                 </div>
             </LayoutSection>
         </main>
         <footer>
             <div className="container">
                 <div className="footer">
-                    {footer}
+                    <Footer />
                 </div>
             </div>
         </footer>

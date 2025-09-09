@@ -21,6 +21,13 @@
     letter-spacing: 0.1rem;
 }
 
+.title--secondary {
+    font-family: var(--font-secondary);
+    font-size: 2.0rem;
+    line-height: 1;
+    font-weight: 300;
+}
+
 /* Texts */
 .text--xl {
     font-size: 2rem;
@@ -67,20 +74,21 @@
     }
 }
 
-.title--intro {
-    font-size: 3.8rem;
-    line-height: 1;
+.title--contact-heading {
     font-family: var(--font-primary);
-    font-weight: 400;
-    margin-block: 0px;
-    text-align: left;
-    overflow-wrap: anywhere;
+    font-weight: 300;
+    font-size: 1rem;
+    margin-top: 10px;
 }
 
-.title--intro-md {
-    margin-bottom: 20px;
-    font-size: 2.0rem;
+.text--contact {
+    font-family: var(--font-primary);
+    font-size: 1.4rem;
     font-weight: 300;
-    line-height: 1;
-    font-family: var(--font-secondary);
+    line-height: 1.4;
+    margin-block: 2px 18px;
+}
+
+.text--vertical-bottom {
+    vertical-align: text-bottom;
 }

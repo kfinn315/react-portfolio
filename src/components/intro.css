@@ -1,33 +1,29 @@
 #intro {
     position: relative;
-    padding-block: 100px;
     --grid-col-1: 285px;
     --col-gap: 65px;
 }
 
 #intro>.container {
-    align-items: center;
     display: grid;
     grid-template-columns: var(--grid-col-1) auto;
+    grid-template-rows: auto auto 1fr;
     grid-template-areas: "hero title" "hero subtitle" "hero motto";
     column-gap: var(--col-gap);
+    align-items: center;
 }
 
-.intro-col1 {
+#hero {
     display: grid;
-    justify-content: center;
     grid-area: hero;
+    justify-content: center;
 }
 
-.intro-col1>div {
+#hero>div {
     grid-row: 1;
     grid-column: 1;
     border: var(--white) 3px solid;
     border-radius: 50%;
-}
-
-.title--intro-md {
-    text-align: left;
 }
 
 .intro-caption {
@@ -39,28 +35,36 @@
     grid-column: 1
 }
 
-.title--intro-md {
-    color: var(--black);
-}
-
 #intro #title {
-    align-self: end;
     grid-area: title;
+    margin-block: 10px 0px;
 }
 
 #intro #subtitle {
-    align-self: start;
     grid-area: subtitle;
+    margin-block: 0px 10px;
 }
 
 #intro #motto {
     grid-area: motto;
 }
 
+#intro .title--intro {
+    /* margin-block: 0px; */
+    text-align: left;
+}
+
+#intro .title--intro-md {
+    color: var(--black);
+    /* padding-bottom: 20px; */
+    margin-block: 10px;
+    text-align: left;
+}
+
 @media(width <=991px) {
     #intro {
         --grid-col-1: 250px;
-        margin-block: 55px;
+        /* margin-block: 55px; */
         padding-block: 0px;
     }
 
@@ -71,17 +75,13 @@
         justify-items: center;
     }
 
-    .intro-col1 {
+    #hero {
         width: var(--grid-col-1);
-        margin-bottom: 10px;
+        margin-bottom: 30px;
     }
 
     #motto {
         margin-block: 10px;
-    }
-
-    .title--intro-md {
-        text-align: center;
     }
 }
 
@@ -90,7 +90,7 @@
         --grid-col-1: 150px;
     }
 
-    .intro-col1 {
+    #hero {
         width: var(--grid-col-1);
     }
 }
@@ -98,16 +98,26 @@
 @media(width<=429px) {
     #intro {
         --grid-col-1: 100px;
-        padding: 20px;
+        padding-block: 20px;
         margin: unset;
     }
 
-    .intro-col1 {
+    #hero {
         width: var(--grid-col-1);
     }
 
     #intro>.container {
         align-items: center;
         padding-inline: unset;
+    }
+}
+
+@media(width <=991px) {
+    #intro .title--intro-m {
+        text-align: center;
+    }
+
+    #intro .title--intro {
+        text-align: center;
     }
 }

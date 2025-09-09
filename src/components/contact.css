@@ -1,89 +1,91 @@
-#contact {
-    padding-block: 30px 110px;
-    display: none;
-}
-
 #contact .container {
     align-items: start;
     display: grid;
     grid-template-columns: repeat(3, 1fr) auto;
-    grid-template-areas: "detail phone email icon";
+    grid-template-rows: auto 1fr;
     column-gap: 30px;
 }
 
-#contact h3 {
-    font-family: var(--font-primary);
-    font-weight: 300;
-    margin-top: 10px;
-    font-size: 1rem;
-}
-
-.contact-text-sm {
-    font-family: var(--font-primary);
+.contact-field a,
+.contact-field p {
     color: white;
-    font-size: 1.4rem;
     text-decoration: none;
-    font-weight: 300;
-    margin-block: 2px 18px;
     display: inline-block;
-    line-height: 1.4;
 }
 
-#contact .container>div {
+.contact-field {
     text-align: end;
 }
 
-#contact .container>div:first-child {
+.left--contact-field {
     text-align: start;
 }
 
-#contact div#design {
-    grid-area: detail;
+.text-left {
+    text-align: start !important;
 }
 
-#contact div#phone {
-    grid-area: phone;
+.contact-heading {
+    grid-row: 1;
+    text-align: right;
 }
 
-#contact div#email {
-    grid-area: email;
+.contact-cell {
+    grid-row: 2;
+    color: var(--white);
+    text-align: right;
 }
 
-#contact div#icon {
-    grid-area: icon;
+.contact-field#email {
     justify-self: end;
-    align-self: end;
+    align-self: center
 }
 
-#contact div#icon>img {
+#contact div#email>img {
     min-width: 50px;
     aspect-ratio: 1;
     background-color: white;
+
+}
+
+#contact div#email {
+    align-self: start;
+}
+
+#phone {
+    display: none;
+}
+
+#location {
+    display: none;
 }
 
 @media(width <=991px) {
     #contact {
-        margin-bottom: 30px;
+        padding-block: 30px;
     }
 
-    #contact div#icon>img {
+    #contact div#email>img {
         min-width: 55px;
     }
 }
 
 @media(width <=767px) {
+    #contact .container {
+        column-gap: 16px;
+    }
+
     #contact {
-        padding-bottom: 40px;
+        padding-block: 40px;
     }
 }
 
 @media(width<=429px) {
     #contact .container {
-        grid-template-areas: "detail" "phone" "email";
-        grid-template-rows: unset;
-        grid-template-columns: unset;
-        column-gap: normal;
+        grid-template-columns: repeat(3, 1fr auto);
+        grid-template-rows: auto;
         justify-items: start;
+        column-gap: 5px;
     }
 
     #contact .container>div {
@@ -95,7 +97,24 @@
         margin: unset;
     }
 
-    #contact div#icon {
+    #contact div#email {
+        display: unset;
+        grid-column: 5;
+    }
+
+    #phone {
+        display: unset;
+    }
+
+    #location {
+        display: unset;
+    }
+
+    .contact-heading {
         display: none;
+    }
+
+    .contact-cell {
+        text-align: left;
     }
 }
