@@ -1,3 +1,5 @@
+import "../components/nav.css";
+
 export function Nav() {
     return <nav>
         <div className="nav container">
