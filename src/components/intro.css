@@ -2,20 +2,43 @@
     position: relative;
     --grid-col-1: 285px;
     --col-gap: 65px;
+    --row-gap: 0px;
 }
 
 #intro>.container {
     display: grid;
     grid-template-columns: var(--grid-col-1) auto;
-    grid-template-rows: auto auto 1fr;
-    grid-template-areas: "hero title" "hero subtitle" "hero motto";
+    grid-template-areas: "col1 col2";
     column-gap: var(--col-gap);
-    align-items: center;
 }
 
+.intro-col1 {
+    grid-area: col1;
+}
+
+.intro-col2 {
+    grid-area: col2;
+    display: grid;
+    grid-template-rows: auto auto 1fr;
+    padding-block: 25px;
+    text-align: left;
+    row-gap: var(--row-gap);
+}
+
+.title--intro {
+    margin-block: 0px;
+    line-height: 0.9;
+}
+
+.title--intro-md {
+    align-self: center;
+    color: var(--black);
+    margin-block: 0px;
+}
+
+/* Hero img */
 #hero {
     display: grid;
-    grid-area: hero;
     justify-content: center;
 }
 
@@ -26,68 +49,50 @@
     border-radius: 50%;
 }
 
-.intro-caption {
-    color: var(--black);
-}
-
-#intro-hero {
+#hero>img {
     grid-row: 1;
-    grid-column: 1
-}
-
-#intro #title {
-    grid-area: title;
-    margin-block: 10px 0px;
-}
-
-#intro #subtitle {
-    grid-area: subtitle;
-    margin-block: 0px 10px;
-}
-
-#intro #motto {
-    grid-area: motto;
-}
-
-#intro .title--intro {
-    /* margin-block: 0px; */
-    text-align: left;
-}
-
-#intro .title--intro-md {
-    color: var(--black);
-    /* padding-bottom: 20px; */
-    margin-block: 10px;
-    text-align: left;
+    grid-column: 1;
+    place-content: center;
 }
 
 @media(width <=991px) {
     #intro {
         --grid-col-1: 250px;
-        /* margin-block: 55px; */
+        --row-gap: 15px;
         padding-block: 0px;
     }
 
     #intro>.container {
-        grid-template-areas: "hero" "title" "subtitle" "motto";
-        grid-template-columns: unset;
-        grid-template-rows: auto auto auto;
+        grid-template-areas: "col1" "col2";
+        grid-template-columns: auto;
+        grid-template-rows: auto auto;
         justify-items: center;
+        row-gap: var(--row-gap);
     }
 
     #hero {
         width: var(--grid-col-1);
-        margin-bottom: 30px;
     }
 
     #motto {
         margin-block: 10px;
+    }
+
+    .intro-col2 {
+        padding-block: 0px;
+        row-gap: var(--row-gap);
+        text-align: center;
+    }
+
+    .title--intro {
+        line-height: 1.1;
     }
 }
 
 @media(width <=767px) {
     #intro {
         --grid-col-1: 150px;
+        --row-gap: 10px;
     }
 
     #hero {
@@ -98,6 +103,7 @@
 @media(width<=429px) {
     #intro {
         --grid-col-1: 100px;
+        --row-gap: 0px;
         padding-block: 20px;
         margin: unset;
     }
@@ -109,15 +115,5 @@
     #intro>.container {
         align-items: center;
         padding-inline: unset;
-    }
-}
-
-@media(width <=991px) {
-    #intro .title--intro-m {
-        text-align: center;
-    }
-
-    #intro .title--intro {
-        text-align: center;
     }
 }

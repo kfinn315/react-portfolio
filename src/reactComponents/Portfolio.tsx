@@ -5,7 +5,7 @@ import { ContactSection } from './Contact';
 import { Experience } from './Experience';
 import { AboutMe } from './AboutMe';
 import { Footer } from './Footer';
-import { IntroSection } from './IntroSection';
+import { HeroSection } from './HeroSection';
 import { Projects } from './Projects';
 
 export function Portfolio() {
@@ -13,7 +13,7 @@ export function Portfolio() {
         <main>
             <div className="layout-section--highlighted layout-section--heading">
                 <LayoutSection id="intro" className="layout-section " aria-describedby="intro-h1 intro-h2">
-                    <IntroSection />
+                    <HeroSection />
                 </LayoutSection>
                 <LayoutSection id="contact" aria-describedby="design">
                     <ContactSection />
