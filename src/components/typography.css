@@ -1,20 +1,10 @@
-
-/* Headings use Poppins */
-/* h1, h2, h3, h4, h5, h6 {
-    font-family: var(--font-primary);
-    font-weight: 600;
-    margin: 0 0 1rem 0;
-  } */
-  
-
 /* Titles */
 .title--lg {
     font-size: 3rem;
     line-height: 1.1;
-    /* font-family: var(--font-primary); */
     font-weight: 300;
-    /* margin-top: 0px; */
-    /* margin-bottom: 15px; */
+    letter-spacing: -0.08rem;
+    font-family: var(--font-secondary);
 }
 
 .title {
@@ -67,6 +57,25 @@
     line-height: 2;
 }
 
+.title--contact-heading {
+    font-family: var(--font-secondary);
+    font-weight: 300;
+    font-size: 1rem;
+    /* margin-top: 10px; */
+}
+
+.text--contact {
+    font-family: var(--font-secondary);
+    font-size: 1.4rem;
+    font-weight: 300;
+    line-height: 1.4;
+    margin-block: 2px 18px;
+}
+
+.text--vertical-bottom {
+    vertical-align: text-bottom;
+}
+
 @media(width <=991px) {
     .title--lg {
         font-size: 2.5rem;
@@ -82,21 +91,9 @@
     }
 }
 
-.title--contact-heading {
-    font-family: var(--font-secondary);
-    font-weight: 300;
-    font-size: 1rem;
-    margin-top: 10px;
-}
+@media (width <=429px) {
 
-.text--contact {
-    font-family: var(--font-secondary);
-    font-size: 1.4rem;
-    font-weight: 300;
-    line-height: 1.4;
-    margin-block: 2px 18px;
-}
-
-.text--vertical-bottom {
-    vertical-align: text-bottom;
+    .text--contact {
+        font-size: 1rem;
+    }
 }

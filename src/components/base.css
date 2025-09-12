@@ -21,6 +21,7 @@
     /* --medium-point: 991px;
     --small-point: 767px; */
 
+    --border-radius: 2px;
 }
 
 * {
@@ -46,11 +47,20 @@ body {
     /* font-style: normal; */
 }
 
+main {
+    background: var(--white);
+}
+
 /* Headings use Poppins */
-h1, h2, h3, h4, h5, h6 {
-  font-family: var(--font-primary);
-  /* font-weight: 600; */
-  margin: 0 0 1rem 0;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: var(--font-primary);
+    /* font-weight: 600; */
+    margin: 0 0 1rem 0;
 }
 
 input,
@@ -76,7 +86,7 @@ select {
     }
 }
 
-.img-overlay{
+.img-overlay {
     position: absolute;
     z-index: 1000000;
     opacity: .5;

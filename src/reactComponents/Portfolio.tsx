@@ -1,4 +1,4 @@
-import { LayoutSection } from './LayoutSectiion';
+import { LayoutSection } from './LayoutSection';
 import { Skills } from './Skills';
 import { SectionTitle } from './SectionTitle';
 import { ContactSection } from './Contact';
@@ -11,18 +11,18 @@ import { Projects } from './Projects';
 export function Portfolio() {
     return (<>
         <main>
-            <div className="layout-section--highlighted layout-section--heading">
-                <LayoutSection id="intro" className="layout-section " aria-describedby="intro-h1 intro-h2">
-                    <HeroSection />
-                </LayoutSection>
-                <LayoutSection id="contact" aria-describedby="design">
-                    <ContactSection />
-                </LayoutSection>
-            </div>
+            <LayoutSection highlighted heading id="intro" aria-describedby="intro-h1 intro-h2">
+                <HeroSection />
+            </LayoutSection>
+            <LayoutSection highlighted short id="contact" aria-describedby="design">
+                <ContactSection />
+            </LayoutSection>
+            {/* <div className="layout-section--highlighted layout-section--heading">
+            </div> */}
             <LayoutSection id="about-me" aria-labelledby="heading-aboutme">
                 <div className="container">
                     <SectionTitle name="About Me" />
-                    <AboutMe />
+                    <AboutMe name={"Kevin"} />
                 </div>
             </LayoutSection>
             <LayoutSection id="projects" aria-labelledby="heading-projects">

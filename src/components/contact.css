@@ -6,10 +6,6 @@
     column-gap: 30px;
 }
 
-.text-left {
-    text-align: start !important;
-}
-
 .contact-heading {
     grid-row: 1;
     text-align: right;
@@ -33,28 +29,15 @@
     grid-row: 2;
 }
 
-@media(width <=991px) {
-    #contact {
-        padding-block: 30px;
-    }
-}
+@media(width <=991px) {}
 
 @media(width <=767px) {
-    #contact {
-        padding-block: 40px;
-    }
-
     #contact .container {
         column-gap: 16px;
     }
 }
 
 @media(width<=429px) {
-    #contact {
-        padding: 0px;
-        margin: 0px;
-    }
-
     #contact .container {
         grid-template-columns: repeat(3, 1fr auto);
         grid-template-rows: auto;

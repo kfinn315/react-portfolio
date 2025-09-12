@@ -1,15 +1,19 @@
 #intro {
-    position: relative;
-    --grid-col-1: 285px;
+    --hero-width: 285px;
     --col-gap: 65px;
     --row-gap: 0px;
+    --col2-vertical-padding: 71px;
+
+    position: relative;
 }
 
 #intro>.container {
     display: grid;
-    grid-template-columns: var(--grid-col-1) auto;
+    grid-template-columns: var(--hero-width) auto;
     grid-template-areas: "col1 col2";
     column-gap: var(--col-gap);
+    text-align: left;
+    row-gap: var(--row-gap);
 }
 
 .intro-col1 {
@@ -20,9 +24,8 @@
     grid-area: col2;
     display: grid;
     grid-template-rows: auto auto 1fr;
-    padding-block: 25px;
-    text-align: left;
     row-gap: var(--row-gap);
+    padding-block: var(--col2-vertical-padding);
 }
 
 .title--intro {
@@ -57,9 +60,11 @@
 
 @media(width <=991px) {
     #intro {
-        --grid-col-1: 250px;
-        --row-gap: 15px;
-        padding-block: 0px;
+        --hero-width: 250px;
+        --row-gap: 0px;
+        --col2-vertical-padding: 0px;
+
+        padding-bottom: 0px;
     }
 
     #intro>.container {
@@ -67,11 +72,11 @@
         grid-template-columns: auto;
         grid-template-rows: auto auto;
         justify-items: center;
-        row-gap: var(--row-gap);
+        text-align: center;
     }
 
     #hero {
-        width: var(--grid-col-1);
+        width: var(--hero-width);
     }
 
     #motto {
@@ -79,9 +84,7 @@
     }
 
     .intro-col2 {
-        padding-block: 0px;
-        row-gap: var(--row-gap);
-        text-align: center;
+        padding-block: var(--col2-vertical-padding);
     }
 
     .title--intro {
@@ -91,29 +94,18 @@
 
 @media(width <=767px) {
     #intro {
-        --grid-col-1: 150px;
+        --hero-width: 150px;
         --row-gap: 10px;
-    }
-
-    #hero {
-        width: var(--grid-col-1);
     }
 }
 
 @media(width<=429px) {
     #intro {
-        --grid-col-1: 100px;
+        --hero-width: 100px;
         --row-gap: 0px;
-        padding-block: 20px;
-        margin: unset;
-    }
-
-    #hero {
-        width: var(--grid-col-1);
     }
 
     #intro>.container {
         align-items: center;
-        padding-inline: unset;
     }
 }

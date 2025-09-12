@@ -8,6 +8,7 @@
 @media(width <=991px) {
     .container {
         max-width: 750px;
+        padding-inline: 35px;
     }
 }
 
