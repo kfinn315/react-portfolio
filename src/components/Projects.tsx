@@ -1,5 +1,5 @@
 import sunburst from '../assets/sunburst.png';
-import "../components/projects.css";
+import "../styles/projects.css";
 
 export const Projects = () => {
 

@@ -1,4 +1,4 @@
-import "../components/nav.css";
+import "../styles/nav.css";
 
 export const NavHeader = () => {
     return <div className="nav container">

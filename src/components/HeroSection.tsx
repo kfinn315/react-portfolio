@@ -1,5 +1,5 @@
 import hero from '../assets/hero.jpeg';
-import "../components/intro.css";
+import "../styles/intro.css";
 
 export const HeroSection = () => {
     const name = "Kevin Finn";

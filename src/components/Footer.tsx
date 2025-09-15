@@ -1,5 +1,5 @@
 import logo from '../assets/logo.svg';
-import "../components/footer.css";
+import "../styles/footer.css";
 
 export const Footer = () => <div className="side">
     <img src={logo} alt="Kevin Finn logo" width="45" height="43" />

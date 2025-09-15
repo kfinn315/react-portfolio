@@ -1,7 +1,7 @@
 import DraftsOutlinedIcon from '@mui/icons-material/DraftsOutlined';
 import LocalPhoneOutlinedIcon from '@mui/icons-material/LocalPhoneOutlined';
 import LocationOnOutlinedIcon from '@mui/icons-material/LocationOnOutlined';
-import "../components/contact.css";
+import "../styles/contact.css";
 
 export const ContactSection = () => {
     return <div className="container">
