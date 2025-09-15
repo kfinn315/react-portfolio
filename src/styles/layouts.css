@@ -10,9 +10,9 @@
     color: var(--white);
 }
 
-.layout-section:nth-child(1) {
+/* .layout-section:nth-child(1) {
     padding-top: 100px;
-}
+} */
 
 .layout-section--short {
     padding-block: 25px;
@@ -29,7 +29,6 @@
     gap: var(--gap);
     text-align: left;
 }
-
 
 .layout-overlay {
     opacity: .5;

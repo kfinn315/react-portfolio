@@ -1,4 +1,5 @@
 .nav {
+    --svg-height: 30px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -15,6 +16,17 @@
     gap: 10px;
     align-items: center;
     padding-top: 3px;
+    height: var(--svg-height);
+}
+
+.nav-links li {
+    height: 100%;
+}
+
+.nav-links svg {
+    color: var(--light-icon);
+    fill: currentColor;
+    height: 100%;
 }
 
 @media (max-width: 48.5rem) {

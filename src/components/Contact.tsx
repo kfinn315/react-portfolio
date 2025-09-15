@@ -19,14 +19,6 @@ export const ContactSection = () => {
         <h3 className='title--contact-heading contact-heading'>Phone</h3>
         <a className="text--contact contact-body" href="tel:xxx-xxx-xxxx">xxx-xxx-xxxx</a>
 
-
-        {/* Github */}
-        <div id="phone-icon" className='text--contact contact-icon'>
-            <LocalPhoneOutlinedIcon className="text--vertical-bottom" />
-        </div>
-        <h3 className='title--contact-heading contact-heading'>Github</h3>
-        <a className="text--contact contact-body" href="https://github.com/kfinn315">kfinn315</a>
-
         {/* Email */}
         <div id="email-icon" className='text--contact contact-icon'>
             <DraftsOutlinedIcon className="text--vertical-bottom" />

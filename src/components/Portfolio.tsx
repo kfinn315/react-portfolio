@@ -7,9 +7,13 @@ import { AboutMe } from './AboutMe';
 import { Footer } from './Footer';
 import { HeroSection } from './HeroSection';
 import { Projects } from './Projects';
+import { NavHeader } from './NavHeader';
 
 export function Portfolio() {
     return (<>
+        <nav>
+            <NavHeader />
+        </nav>
         <main>
             <LayoutSection highlighted heading id="intro" aria-describedby="intro-h1 intro-h2">
                 <HeroSection />
@@ -48,6 +52,7 @@ export function Portfolio() {
             <div className="container">
                 <div className="footer">
                     <Footer />
+
                 </div>
             </div>
         </footer>
