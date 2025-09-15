@@ -5,13 +5,13 @@ export const Projects = () => {
 
     return <div className='projects'>
         {sunburstProject}
-        {placeholderProject}
-        {placeholderProject}
-        {placeholderProject}
+        {ghostProject}
+        {ghostProject}
+        {ghostProject}
     </div>;
 }
 
-const sunburstProject = <button className='project-item' onClick={() => { window.open("https://kfinn315.github.io/ReactSunburst", "_child"); }}>
+const sunburstProject = <button className='project-item hover-effect' onClick={() => { window.open("https://kfinn315.github.io/ReactSunburst", "_child"); }}>
     <img src={sunburst} width="300" height="300" alt="Sunburst app" className="project-screenshot" />
     <h3 className="title">React Sunburst</h3>
     <p className="text">
@@ -19,10 +19,4 @@ const sunburstProject = <button className='project-item' onClick={() => { window
     </p>
 </button>;
 
-const placeholderProject = <button className='project-item'>
-    <img src={sunburst} width="300" height="300" alt="Sunburst app" className="project-screenshot" />
-    <h3 className="title">Project B</h3>
-    <p className="text">
-        Placeholder Text
-    </p>
-</button>;
+const ghostProject = <div className='project-item'></div>;

@@ -1,13 +1,12 @@
 # Portfolio Website
-[url]
-
-
+<https://www.kfinn315.github.io>
 
 This project was built using these technologies:
 - Vite
 - Typescript
 - React
 - MUI
+- VSCode
 
 # React + TypeScript + Vite
 

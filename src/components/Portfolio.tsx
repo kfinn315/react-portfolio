@@ -37,16 +37,16 @@ export function Portfolio() {
             </LayoutSection>
             <LayoutSection id="skills" aria-labelledby="heading-skills">
                 <div className="container">
-                    <SectionTitle name="Skills" />
+                    <SectionTitle name="Skills" centered />
                     <Skills />
                 </div>
             </LayoutSection>
-            <LayoutSection id="experience" aria-labelledby="heading-experience">
+            {/* <LayoutSection id="experience" aria-labelledby="heading-experience">
                 <div className="container">
-                    <SectionTitle name="Experience" />
+                    <SectionTitle name="Experience" centered />
                     <Experience />
                 </div>
-            </LayoutSection>
+            </LayoutSection> */}
         </main>
         <footer>
             <div className="container">

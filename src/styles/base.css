@@ -5,6 +5,7 @@
     --dark-blue: #130c24;
     --gray: #4c4c4c;
     --beige: #f5f5f1;
+
     --text-color: var(--black);
     --gap: 45px;
 
@@ -17,6 +18,9 @@
     --anchor-color: var(--primary);
     --font-primary: 'Poppins', 'sans-serif';
     --font-secondary: 'Roboto', 'sans-serif';
+
+    --focus: #bdbdbd;
+    --text-focus: var(--white);
 
     /* --medium-point: 991px;
     --small-point: 767px; */

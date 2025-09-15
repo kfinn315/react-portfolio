@@ -21,6 +21,11 @@
 .layout-section-title {
     margin-top: 0px;
     font-family: var(--font-primary);
+    text-align: start;
+}
+
+.layout-section-title--center {
+    text-align: center;
 }
 
 .layout-grid-half {

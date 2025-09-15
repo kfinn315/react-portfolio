@@ -1,4 +1,5 @@
 .projects {
+    --button-background: var(--white);
     display: flex;
     gap: var(--gap);
     /* margin-bottom: 100px; */
@@ -15,19 +16,28 @@
     order: 1;
 }
 
-button.project-item {
-    width: 20rem;
-    border: 1px solid var(--light-gray);
-    border-radius: var(--border-radius);
+.project-item {
+    min-width: 20rem;
     padding: 30px;
-    cursor: pointer;
     display: flex;
     flex-direction: column;
     align-items: center;
+    border: 1px solid var(--gray-light);
+    border-radius: var(--border-radius);
+    background-color: var(--button-background);
 }
 
-button.project-item:active {
-    background: red;
+button.project-item {
+    cursor: pointer;
+}
+
+.project-item:hover {
+    background: var(--focus);
+    color: var(--white);
+}
+
+.project-item:hover .text {
+    color: var(--white);
 }
 
 @media (max-width: 37.5rem) {

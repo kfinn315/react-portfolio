@@ -14,3 +14,20 @@
 .text-left {
     text-align: start !important;
 }
+
+.text--vertical-bottom {
+    vertical-align: text-bottom;
+}
+
+.hover-effect {
+    transition: translate 180ms, opacity 180ms;
+    opacity: 0.8;
+}
+
+.hover-effect:hover {
+    opacity: 1;
+}
+
+.hover-effect:active {
+    translate: 1px, 1px;
+}
