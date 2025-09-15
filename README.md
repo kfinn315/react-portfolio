@@ -1,3 +1,14 @@
+# Portfolio Website
+[url]
+
+
+
+This project was built using these technologies:
+- Vite
+- Typescript
+- React
+- MUI
+
 # React + TypeScript + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
