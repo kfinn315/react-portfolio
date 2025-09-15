@@ -28,7 +28,7 @@
     letter-spacing: 1px;
     font-size: 0.78rem;
 }
-
+/* 
 .btn--raised {
     background-color: var(--primary);
     color: var(--black);
@@ -36,7 +36,7 @@
     background-image: url("assets/arrow-right.svg");
     background-repeat: no-repeat;
     background-position: right 20px center;
-}
+} */
 
 .btn--line {
     color: var(--text-color);

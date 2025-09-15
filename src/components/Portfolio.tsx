@@ -2,7 +2,7 @@ import { LayoutSection } from './LayoutSection';
 import { Skills } from './Skills';
 import { SectionTitle } from './SectionTitle';
 import { ContactSection } from './Contact';
-import { Experience } from './Experience';
+// import { Experience } from './Experience';
 import { AboutMe } from './AboutMe';
 import { Footer } from './Footer';
 import { HeroSection } from './HeroSection';
@@ -15,7 +15,7 @@ export function Portfolio() {
             <NavHeader />
         </nav>
         <main>
-            <LayoutSection highlighted heading id="intro" aria-describedby="intro-h1 intro-h2">
+            <LayoutSection highlighted id="intro" aria-describedby="intro-h1 intro-h2">
                 <HeroSection />
             </LayoutSection>
             <LayoutSection highlighted short id="contact" aria-describedby="design">
